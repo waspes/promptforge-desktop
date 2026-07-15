@@ -24,7 +24,7 @@
       "preload.js",
       "build/**"
     ],
-    "icon": "build/icon",
+    "icon": "build/icon.png",
     "win": {
       "target": [
         {
@@ -33,17 +33,14 @@
             "x64"
           ]
         }
-      ],
-      "icon": "build/icon.ico"
+      ]
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "PromptForge AI",
-      "installerIcon": "build/icon.ico",
-      "uninstallerIcon": "build/icon.ico"
+      "shortcutName": "PromptForge AI"
     },
     "mac": {
       "target": [
@@ -54,7 +51,6 @@
           ]
         }
       ],
-      "icon": "build/icon.icns",
       "category": "public.app-category.productivity",
       "darkModeSupport": true
     },
@@ -80,12 +76,13 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "promptforge-ai",
-      "repo": "desktop"
+      "owner": "mytychfranek5-ui",
+      "repo": "promptforge-desktop"
     }
   },
   "devDependencies": {
     "electron": "^36.9.5",
-    "electron-builder": "^26.15.3"
+    "electron-builder": "^26.15.3",
+    "sharp": "^0.33.5"
   }
 }
