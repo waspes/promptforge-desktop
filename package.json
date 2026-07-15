@@ -1,0 +1,91 @@
+{
+  "name": "promptforge-ai",
+  "version": "1.0.0",
+  "description": "PromptForge AI — Multi-Agent Prompt Studio",
+  "main": "main.js",
+  "author": "PromptForge AI",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "build:all": "electron-builder --win --mac --linux"
+  },
+  "build": {
+    "appId": "tech.promtforge.app",
+    "productName": "PromptForge AI",
+    "copyright": "Copyright © 2025 PromptForge AI",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "build/**"
+    ],
+    "icon": "build/icon",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PromptForge AI",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "universal"
+          ]
+        }
+      ],
+      "icon": "build/icon.icns",
+      "category": "public.app-category.productivity",
+      "darkModeSupport": true
+    },
+    "dmg": {
+      "title": "PromptForge AI",
+      "background": null,
+      "window": {
+        "width": 540,
+        "height": 380
+      }
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png",
+      "category": "Development"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "promptforge-ai",
+      "repo": "desktop"
+    }
+  },
+  "devDependencies": {
+    "electron": "^36.9.5",
+    "electron-builder": "^26.15.3"
+  }
+}
