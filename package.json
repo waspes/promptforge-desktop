@@ -1,9 +1,9 @@
 {
-  "name": "promptforge-ai",
-  "version": "1.0.0",
-  "description": "PromptForge AI — Multi-Agent Prompt Studio",
+  "name": "waspes",
+  "version": "1.1.0",
+  "description": "Waspes — AI Website Builder",
   "main": "main.js",
-  "author": "PromptForge AI",
+  "author": "Waspes",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
@@ -13,9 +13,10 @@
     "build:all": "electron-builder --win --mac --linux --publish never"
   },
   "build": {
-    "appId": "tech.promtforge.app",
-    "productName": "PromptForge AI",
-    "copyright": "Copyright © 2025 PromptForge AI",
+    "appId": "com.waspes.app",
+    "productName": "Waspes",
+    "copyright": "Copyright © 2026 Waspes",
+    "artifactName": "Waspes-${arch}.${ext}",
     "directories": {
       "output": "dist"
     },
@@ -40,7 +41,8 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "PromptForge AI"
+      "shortcutName": "Waspes",
+      "artifactName": "Waspes-Setup-${arch}.${ext}"
     },
     "mac": {
       "target": [
@@ -55,7 +57,8 @@
       "darkModeSupport": true
     },
     "dmg": {
-      "title": "PromptForge AI",
+      "title": "Waspes",
+      "artifactName": "Waspes-${arch}.${ext}",
       "background": null,
       "window": {
         "width": 540,

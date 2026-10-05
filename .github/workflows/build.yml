@@ -38,7 +38,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: PromptForge-${{ matrix.platform }}
+          name: Waspes-${{ matrix.platform }}
           path: ${{ matrix.artifact }}
 
   release:
@@ -53,15 +53,15 @@ jobs:
           path: artifacts
       - uses: softprops/action-gh-release@v2
         with:
-          name: "PromptForge AI ${{ github.ref_name }}"
+          name: "Waspes ${{ github.ref_name }}"
           body: |
-            ## PromptForge AI ${{ github.ref_name }}
+            ## Waspes ${{ github.ref_name }}
             Download the app for your platform:
             | Platform | Download |
             |----------|---------|
-            | 🪟 Windows | `PromptForge-AI-Setup-x64.exe` |
-            | 🍎 macOS | `PromptForge-AI-universal.dmg` |
-            | 🐧 Linux | `PromptForge-AI-x64.AppImage` |
+            | 🪟 Windows | `Waspes-Setup-x64.exe` |
+            | 🍎 macOS | `Waspes-universal.dmg` |
+            | 🐧 Linux | `Waspes-x64.AppImage` |
           files: artifacts/**/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

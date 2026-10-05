@@ -1,7 +1,7 @@
 const { app, BrowserWindow, shell, Menu, nativeTheme, session } = require("electron");
 const path = require("path");
 
-const APP_URL = "https://promtforge.tech";
+const APP_URL = "https://waspes.com";
 const STRIPE_URL = "https://checkout.stripe.com";
 const SUPABASE_URL = "https://qbrowclzsxgareynymas.supabase.co";
 
@@ -24,7 +24,7 @@ function createWindow() {
     titleBarStyle: process.platform === "darwin" ? "hiddenInset" : "default",
     backgroundColor: "#09090f",
     icon: path.join(__dirname, "build", process.platform === "win32" ? "icon.ico" : process.platform === "darwin" ? "icon.icns" : "icon.png"),
-    title: "PromptForge AI",
+    title: "Waspes",
     show: false,
     autoHideMenuBar: process.platform !== "darwin",
   });
