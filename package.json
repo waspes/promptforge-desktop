@@ -79,7 +79,7 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "mytychfranek5-ui",
+      "owner": "waspes",
       "repo": "promptforge-desktop"
     }
   },
